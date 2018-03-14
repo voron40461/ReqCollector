@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Definition -->
+    <definition name="base-definition"
+                template="/WEB-INF/jsp/application/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/application/header.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="" />
+        <put-attribute name="modal" value="/WEB-INF/jsp/authentication/modal.jsp" />
+        <put-list-attribute name="javascriptsBefore">
+            <add-attribute value="/resources/scripts/w3data/w3data.js" />
+            <add-attribute value="/resources/scripts/modal/modernizr.js" />
+            <add-attribute value="/resources/scripts/jquery/jquery-3.3.1.min.js" />
+        </put-list-attribute>
+        <put-list-attribute name="javascriptsAfter">
+            <add-attribute value="/resources/scripts/bootstrap/bootstrap.min.js" />
+            <add-attribute value="/resources/scripts/bootstrap/bootstrap-table.min.js" />
+            <add-attribute value="/resources/scripts/application.js" />
+            <add-attribute value="/resources/scripts/modal/main.js" />
+        </put-list-attribute>
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="http://fonts.googleapis.com/css?family=PT+Sans:400,700" />
+            <add-attribute value="/resources/stylesheets/bootstrap/bootstrap.min.css" />
+            <add-attribute value="/resources/stylesheets/bootstrap/bootstrap-table.min.css" />
+            <add-attribute value="/resources/stylesheets/layout.css" />
+            <add-attribute value="/resources/stylesheets/authentication/reset.css" />
+            <add-attribute value="/resources/stylesheets/authentication/style.css" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="home/index" extends="base-definition">
+        <put-attribute name="title" value="ReqController | Welcome" />
+        <put-attribute name="body" value="/WEB-INF/jsp/home/index.jsp" />
+    </definition>
+
+    <definition name="projects/index" extends="base-definition">
+        <put-attribute name="title" value="Projects" />
+        <put-attribute name="body" value="/WEB-INF/jsp/projects/index.jsp" />
+    </definition>
+
+    <definition name="requirements/index" extends="base-definition">
+        <put-attribute name="title" value="Requirements" />
+        <put-attribute name="body" value="/WEB-INF/jsp/requirements/index.jsp" />
+    </definition>
+
+    <definition name="requirements/edit" extends="base-definition">
+        <put-attribute name="title" value="Requirement item" />
+        <put-attribute name="body" value="/WEB-INF/jsp/requirements/edit.jsp" />
+    </definition>
+
+</tiles-definitions>
