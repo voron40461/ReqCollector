@@ -1,5 +1,3 @@
-# SmartCpabe
+# ReqCollector
 
-Cryptographic module for SMART system
-
-Spring MVC + Spring Security + Hibernate + PostgreSQL + Maven
+Software requirements management system.
